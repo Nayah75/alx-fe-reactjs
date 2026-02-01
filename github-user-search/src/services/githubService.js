@@ -23,6 +23,14 @@ const axiosInstance = axios.create({
    MUST contain this exact URL
 ========================= */
 
+export const fetchUserData = async (username) => {
+  const response = await axiosInstance.get(
+    `https://api.github.com/users/${username}`
+  );
+
+  return response.data;
+};
+
 export const searchUsers = async ({ username, location, minRepos }) => {
   let query = "";
 
