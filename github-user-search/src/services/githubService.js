@@ -1,4 +1,4 @@
-import axios from 'axios';
+6import axios from 'axios';
 
 const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN;
 
@@ -9,7 +9,7 @@ Authorization: token ${GITHUB_TOKEN}
 });
 
 import { useState } from "react";
-import { searchUsers } from "../api/github"; // adjust path if needed
+import { searchUsers } from "../services/githubService"; // adjust path if needed
 
 export default function Search({ onResults }) {
   const [form, setForm] = useState({
